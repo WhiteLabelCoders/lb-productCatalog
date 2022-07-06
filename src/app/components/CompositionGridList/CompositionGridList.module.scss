@@ -1,0 +1,22 @@
+@import '../../styles/visable';
+
+$spaceingHorizontal: 24;
+$spaceingVertical: 32;
+
+.grid-list {
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100% + #{$spaceingHorizontal}px);
+	margin-left: -#{$spaceingHorizontal/2}px;
+	margin-right: -#{$spaceingHorizontal/2}px;
+	margin-bottom: -#{$spaceingVertical}px;	
+	& > * {
+		width: calc(25% - #{$spaceingHorizontal}px);
+		margin-left: #{$spaceingHorizontal/2}px;
+		margin-right: #{$spaceingHorizontal/2}px;
+		margin-bottom: #{$spaceingVertical}px;
+		@include tablet-wide-down() {
+			width: 100%;
+		}
+	}
+}	

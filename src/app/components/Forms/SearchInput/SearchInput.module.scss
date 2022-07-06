@@ -1,0 +1,30 @@
+.search-input {
+	background: #FFFFFF;
+	border: 1px solid var(--gray200);
+	border-radius: 8px;
+	display: flex;
+  align-items: center;
+	padding: 12px 16px;
+	width: 392px;
+	input {
+		border: 0;
+		background: transparent;
+		color: var(--gray500);
+		font-family: var(--font-family);
+		width: 100%;
+		&:focus {
+			outline: none;
+		}
+		&::placeholder {
+			color: var(--gray500);
+			opacity: 1;
+		}
+		&::-webkit-search-cancel-button {
+			display: none;
+		}
+	}
+	button {
+		border: 0;
+		background: none;
+	}
+}

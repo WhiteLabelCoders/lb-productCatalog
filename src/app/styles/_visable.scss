@@ -1,0 +1,22 @@
+// Breakpoints
+$desktop: 1025px;
+$tabletWide: 1023px;
+$tablet: 768px;
+
+@mixin desktop-up {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet-wide-down {
+  @media screen and (max-width: $tabletWide) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}

@@ -1,0 +1,27 @@
+.pagination {
+	margin-top: 56px;
+	display: flex;
+	justify-content: center;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 16px;
+	&__first-link {
+		margin-right: calc(32px - 8px);
+	}
+	&__last-link {
+		margin-left: calc(32px - 8px);
+	}
+	&__link {
+		margin: 0 8px;
+	}
+	a {
+		color: var(--gray500);
+		text-decoration: none;
+	}
+	&__link--disabled {
+		color: var(--gray400);
+	}
+	&__link--active {
+		color: var(--primaryDark);
+	}
+}

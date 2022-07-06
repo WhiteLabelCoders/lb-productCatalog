@@ -1,0 +1,37 @@
+.checkbox {
+	display: flex;
+	align-items: center;
+	label {
+		line-height: 24px;
+		padding-left: calc(24px + 8px);
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 22px;
+			height: 22px;
+			border: 1px solid var(--gray200);
+			border-radius: 4px;
+			background-color: #FFF;
+			background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuMDAwMSAxMC43Nzk5TDMuMjIwMSA3Ljk5OTlMMi4yNzM0NCA4LjkzOTlMNi4wMDAxIDEyLjY2NjZMMTQuMDAwMSA0LjY2NjU2TDEzLjA2MDEgMy43MjY1Nkw2LjAwMDEgMTAuNzc5OVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=");
+			background-position: center center;
+			background-repeat: no-repeat;
+			left: 0;
+			transition: background-color 100ms linear
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	label.checked {
+		&:before {
+			background-color: var(--primary);
+		}	
+	}
+	input {
+		-webkit-appearance: none;
+		appearance: none;
+		background-color: #fff;
+		margin: 0;
+	}
+}

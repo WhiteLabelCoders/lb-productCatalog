@@ -1,0 +1,30 @@
+.button {
+	background: var(--primary);
+	border-radius: 4px;
+	border: 0;
+	color: #FFF;
+	padding: 10px 24px;
+	font-size: 14px;
+	line-height: 16px;
+	transition: 0.3s;
+	width: 100%;
+	border: 1px solid var(--primary);
+	&:hover {
+		background: var(--primaryDark);
+		cursor: pointer;
+	}
+	&.disabled {
+		background: var(--gray400);
+		border: 1px solid var(--gray400);
+		&:hover {
+			cursor: default;
+		}
+	}
+	&--secondary {
+		background: #fff;
+		color: var(--primary);
+		&:hover {
+			color: #fff;
+		}
+	}
+}

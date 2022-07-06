@@ -1,0 +1,47 @@
+@import '../../styles/visable';
+
+.header {
+	$self: &;
+	padding: 28px 0;
+	:global(.container) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@include tablet-wide-down() {
+			#{ $self }__logo {
+				order: 1;
+				width:100%
+			}
+			#{ $self }__menu {
+				order: 3;
+				width: 100%;
+				margin-top: 24px;
+				flex-wrap: wrap;
+				:global(.search-input) {
+					width: 100%;
+					margin-bottom: 24px;
+				}
+			}	
+		}
+	}
+	&__logo {
+		width: 20%;
+	}
+	&__menu {
+		display: flex;
+		align-items: center;
+	}
+	&__filters {
+		display: flex;
+		& > * {
+			margin-right: 8px;
+			margin-left: 24px;
+			@include tablet-wide-down() {
+				&:first-child {
+					margin-left: 0;
+				}
+			}	
+		}
+	}
+}
